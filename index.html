@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cat Generator</title>
+    <style>
+      #loading {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cat Generator</h1>
+    <button onclick="generateCat()">Generate Cat</button>
+    <div id="catContainer"></div>
+    <div id="loading">Loading...</div>
+
+    <script>
+      function generateCat() {
+        document.getElementById("loading").style.display = "block";
+        var img = document.createElement("img");
+        img.src = "https://cataas.com/cat?" + new Date().getTime();
+        img.onload = function() {
+          document.getElementById("loading").style.display = "none";
+        };
+        document.getElementById("catContainer").innerHTML = "";
+        document.getElementById("catContainer").appendChild(img);
+      }
+    </script>
+  </body>
+</html>
