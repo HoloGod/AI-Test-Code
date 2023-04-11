@@ -3,16 +3,48 @@
   <head>
     <title>Cat Generator</title>
     <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 0;
+        text-align: center;
+      }
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #3e8e41;
+      }
+      #catContainer {
+        margin-top: 20px;
+      }
       #loading {
         display: none;
+        margin-top: 20px;
       }
     </style>
   </head>
   <body>
-    <h1>Cat Generator</h1>
-    <button onclick="generateCat()">Generate Cat</button>
-    <div id="catContainer"></div>
-    <div id="loading">Loading...</div>
+    <div class="container">
+      <h1>Cat Generator</h1>
+      <button onclick="generateCat()">Generate Cat</button>
+      <div id="catContainer"></div>
+      <div id="loading">Loading...</div>
+    </div>
 
     <script>
       function generateCat() {
