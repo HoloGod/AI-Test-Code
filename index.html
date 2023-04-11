@@ -8,6 +8,11 @@
         margin: 0;
         padding: 0;
       }
+      .top-bar,
+      .bottom-bar {
+        height: 50px;
+        background-color: black;
+      }
       .container {
         max-width: 800px;
         margin: 0 auto;
@@ -39,12 +44,14 @@
     </style>
   </head>
   <body>
+    <div class="top-bar"></div>
     <div class="container">
       <h1>Cat Generator</h1>
       <button onclick="generateCat()">Generate Cat</button>
       <div id="catContainer"></div>
       <div id="loading">Loading...</div>
     </div>
+    <div class="bottom-bar"></div>
 
     <script>
       function generateCat() {
